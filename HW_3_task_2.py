@@ -18,7 +18,7 @@
 import random as rm
 
 def get_numbers_ticket(min, max, quantity):
-    if min < 1 or max > 1000 or min > max or max - min < 5:
+    if min < 1 or max > 1000 or min > max or max - min < quantity:
         return []
     else:
         random_numbers = set()
@@ -29,7 +29,7 @@ def get_numbers_ticket(min, max, quantity):
         return random_numbers
 
 
-print(get_numbers_ticket(12,100,20))
+print(get_numbers_ticket(100,140,60))
 
 #or
 # else:
