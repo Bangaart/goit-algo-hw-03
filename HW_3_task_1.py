@@ -9,6 +9,6 @@ def get_days_from_today(date):
         except ValueError:
             return f"Verify correctness of your date"
         else:
-            return f"Elapsed days: {(dt.datetime.today() - users_date).days}"
+            return (dt.datetime.today() - users_date).days
 
 print(get_days_from_today("2005-02-06"))
