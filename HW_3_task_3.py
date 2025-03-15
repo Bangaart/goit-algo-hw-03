@@ -31,11 +31,10 @@ raw_numbers = [
     "38fff050 111 22 11   ",
 ]
 
-def normalize_telephone_numbers (numbers):
-    normalized_numbers = []
-    for i in numbers:
-        normalized_numbers.append(re.sub(r"[^0-9]","",i).removeprefix("38").replace("0","+380",1))
-    return f"Нормалізовані номери телефонів для SMS-розсилки: \n {normalized_numbers}"
+def normalize_phone (number):
 
-print(normalize_telephone_numbers(raw_numbers))
+    return  re.sub(r"[^0-9]","",number).removeprefix("38").replace("0","+380",1)
+
+
+print(normalize_phone("fff38050-111-22-22"))
 
